@@ -1,23 +1,20 @@
-/* --- Variables globales --- */
 :root {
-  --text-color: white; /* change la couleur du texte ici facilement */
+  --text-color: white;
 }
 
-/* --- Fond GIF animé + display flex --- */
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
 
-  /* GIF en fond via fichier local */
   background: url("mon-fond.gif") no-repeat center center;
   background-size: cover;
 
   font-family: "Poppins", sans-serif;
-  color: var(--text-color); /* texte global */
+  color: var(--text-color);
 }
 
-/* --- Colonne gauche : photo --- */
+/*Colonne gauche : photo */
 header {
   flex: 1; /* prend tout l'espace à gauche */
   display: flex;
@@ -25,7 +22,7 @@ header {
   align-items: center; /* centre verticalement */
 }
 
-/* --- Photo ronde avec bordure verte + glow --- */
+/* Photo ronde avec bordure verte + glow */
 .profile-photo {
   width: 250px;
   height: 250px;
@@ -35,7 +32,7 @@ header {
   box-shadow: 0px 0px 25px 20px rgb(54 169 192 / 30%);
 }
 
-/* --- Colonne droite : carte transparente avec bordure verte + glow --- */
+/* Colonne droite : carte transparente avec bordure verte + glow */
 main {
   flex: 1.5;
   background: rgba(255, 255, 255, 0); /* transparent */
@@ -53,7 +50,7 @@ main {
   box-shadow: 0px 0px 25px 20px rgb(54 169 192 / 30%);
 }
 
-/* --- Titres --- */
+/* Titres */
 h1,
 h2 {
   margin: 0;
@@ -64,14 +61,43 @@ h1 {
   font-size: 2rem;
 }
 
-/* --- Paragraphes et listes --- */
+/* Paragraphes et listes */
 p,
 li {
   color: var(--text-color);
 }
 
-/* --- Listes --- */
+/* Listes */
 ul {
   list-style: none;
   padding: 0;
+}
+
+main h1,
+main h2,
+main p,
+main li {
+  color: white;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.8), 0 0 8px rgba(36, 212, 42, 0.6),
+    0 0 12px rgba(36, 212, 42, 0.3);
+}
+
+/* Conteneur à droite */
+.logo {
+  flex: 1; /* occupe la colonne de droite */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  background: transparent;
+}
+
+/* Image */
+.logo img {
+  display: block;
+  max-width: 350px; /* limite la taille maximale */
+  width: 80%; /* optionnel : s’adapte à la colonne */
+  height: auto; /* garde les proportions */
+  object-fit: contain;
+  background: transparent;
+  border: none;
 }
