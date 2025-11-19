@@ -4,8 +4,10 @@ body {
     min-height: 100vh;
     display: flex;
 
-    /* Dégradé */
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    /* GIF en fond via fichier local */
+    background: url("mon-fond.gif") no-repeat center center;
+    background-size: cover;
+
     font-family: "Poppins", sans-serif;
 }
 
